@@ -13,6 +13,12 @@ export const useStyles = makeStyles((theme) => ({
       borderTopRightRadius: "10px",
       minWidth: "auto",
     },
+    "& .MuiTab-wrapper": {
+      flexDirection: "row",
+      "& div img": {
+        padding: "5px",
+      },
+    },
   },
   tabTitle: {
     background: theme.palette.primary.main,

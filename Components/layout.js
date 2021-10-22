@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
   rootStyle: {
     backgroundColor: "#fde1de",
   },
-  mainContent: { marginLeft: "130px", padding: theme.spacing(3) },
+  mainContent: { marginLeft: "130px", padding: theme.spacing(1.5, 3) },
 }));
 
 export default function Layout({ children }) {

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import HomeTabs from "../Components/HomeTabs/HomeTabs";
 import { useStyles } from "../styles/Home.style.js";
 
 export default function Home() {
@@ -11,7 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main>
+        <HomeTabs />
+      </main>
     </div>
   );
 }

@@ -2,6 +2,9 @@ import React from "react";
 import { Box, Tabs, Tab, Typography } from "@material-ui/core";
 import { useStyles } from "./TabsWrapper.style";
 import FileGrid from "../FileGrid/FileGrid";
+import RunningProcess from "../RunningProcess/RunningProcess";
+import IPythonClusters from "../IPythonClusters/IPythonClusters";
+import Nbextensions from "../Nbextensions/Nbextensions";
 
 const TabsWrapper = () => {
   const [value, setValue] = React.useState(0);
@@ -63,26 +66,23 @@ const TabsWrapper = () => {
         <FileGrid />
       </TabPanel>
       <TabPanel
-        tabTitle={"Select items to perform actions on them."}
+        tabTitle={"Currently running Jupyter processes "}
         value={value}
         index={1}
       >
-        Item Two
+        <RunningProcess />
       </TabPanel>
       <TabPanel
-        tabTitle={"Select items to perform actions on them."}
+        tabTitle={"IPython parallel computing clusters"}
         value={value}
         index={2}
       >
-        Item Three
+        <IPythonClusters />
       </TabPanel>
-      <TabPanel
-        tabTitle={"Select items to perform actions on them."}
-        value={value}
-        index={3}
-      >
-        Item Three
+      <TabPanel tabTitle={"Configurable nbextensions"} value={value} index={3}>
+        <Nbextensions />
       </TabPanel>
+      <button className={styles.quitButton}>Quit</button>
     </div>
   );
 };

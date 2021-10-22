@@ -15,6 +15,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   drawerContent: {
     height: "100%",
+    display: "flex",
+    flexDirection: "column",
   },
   logoWrapper: {
     marginTop: theme.spacing(2),
@@ -32,6 +34,7 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     marginTop: "auto",
+    marginBottom: theme.spacing(5),
   },
 }));
 
